@@ -1,0 +1,9 @@
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\TESTManager.dll
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\TESTManager.pdb
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\DataAccess.dll
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\TESTEntity.dll
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\DataAccess.pdb
+D:\pj\New folder\TESTProject\TESTManager\bin\Debug\TESTEntity.pdb
+D:\pj\New folder\TESTProject\TESTManager\obj\Debug\TESTManager.csprojResolveAssemblyReference.cache
+D:\pj\New folder\TESTProject\TESTManager\obj\Debug\TESTManager.dll
+D:\pj\New folder\TESTProject\TESTManager\obj\Debug\TESTManager.pdb

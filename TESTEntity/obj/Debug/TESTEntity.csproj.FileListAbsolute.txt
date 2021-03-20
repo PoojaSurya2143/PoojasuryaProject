@@ -1,0 +1,5 @@
+D:\pj\New folder\TESTProject\TESTEntity\bin\Debug\TESTEntity.dll
+D:\pj\New folder\TESTProject\TESTEntity\bin\Debug\TESTEntity.pdb
+D:\pj\New folder\TESTProject\TESTEntity\obj\Debug\TESTEntity.csprojResolveAssemblyReference.cache
+D:\pj\New folder\TESTProject\TESTEntity\obj\Debug\TESTEntity.dll
+D:\pj\New folder\TESTProject\TESTEntity\obj\Debug\TESTEntity.pdb

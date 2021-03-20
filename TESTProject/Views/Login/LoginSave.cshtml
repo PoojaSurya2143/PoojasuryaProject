@@ -1,0 +1,154 @@
+﻿@model TESTEntity.LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">*@
+    <link href="~/LoginFile/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">*@
+    <link href="~/LoginFile/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">*@
+    <link href="~/LoginFile/vendor/animate/animate.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">*@
+    <link href="~/LoginFile/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">*@
+    <link href="~/LoginFile/vendor/select2/select2.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    @*<link rel="stylesheet" type="text/css" href="css/util.css">*@
+    <link href="~/LoginFile/css/main.css" rel="stylesheet" />
+    @*<link rel="stylesheet" type="text/css" href="css/main.css">*@
+    <link href="~/LoginFile/css/util.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <style>
+        .wrap-login100 {
+            /*padding: 92px 130px 33px 95px;*/
+            background-color: #4a2d1b40;
+        }
+
+        .container-login100 {
+            /*background-image: url('../../dist/img/3.jpg');*/
+            background-image: url('../../build/images/BOOK1.jpeg');
+            background-size: cover;
+        }
+
+        .wrapper {
+            background-color: white;
+            height: 25%;
+        }
+        .login100-form-btn1{
+        background-color: #4a2d1b40;
+        }
+        .container-login100-form-btn1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <span class="login100-form-title" style="color:white;font-size:51px;font-family:fantasy">
+                   Welcome 
+                </span>
+                @*<form class="login100-form validate-form">*@
+                @using (Html.BeginForm("LoginSave", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="wrap-input100">
+                        @Html.TextBoxFor(model => model.UserID, new { @id = "txtUserId", @maxlength = "30", @class = "form-control input100", @type = "text", @name = "username", @required = "required", @placeholder = "Enter User Name" })
+                        @*<input class="input100" type="text" name="email" placeholder="Email">*@
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100" data-validate="Password is required">
+                        @Html.TextBoxFor(model => model.Password, new { @id = "txtpassword", @maxlength = "30", @class = "form-control input100", @required = "required", @name = "pass", @placeholder = "Password", @type = "password" })
+                        @*<input class="input100" type="password" name="pass" placeholder="Password">*@
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <input type="submit" class="login100-form-btn" value="Login" />
+                       
+                    </div>
+                    <div class="container-login100-form-btn">
+                       
+                        <a href="/SignUp/SignUpSave"><input type="button" class="login100-form-btn" value="Sign Up" style="background-color:red" /></a>
+                    </div>
+                    @*<div class="text-center p-t-12">
+                            <span class="txt1">
+                                Forgot
+                            </span>
+                            <a class="txt2" href="#">
+                                Username / Password?
+                            </a>
+                        </div>
+                        <div class="text-center p-t-126">
+                            <a class="txt2" href="#">
+                                Create your Account
+                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                            </a>
+                        </div>*@
+                    @*</form>*@
+                }
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/build/images/books.png" />
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--===============================================================================================-->
+    @*<script src="vendor/jquery/jquery-3.2.1.min.js"></script>*@
+    <script src="~/LoginFile/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    @*<script src="vendor/bootstrap/js/popper.js"></script>*@
+    <script src="~/LoginFile/vendor/bootstrap/js/popper.js"></script>
+    @*<script src="vendor/bootstrap/js/bootstrap.min.js"></script>*@
+    <script src="~/LoginFile/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    @*<script src="vendor/select2/select2.min.js"></script>*@
+    <script src="~/LoginFile/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    @*<script src="vendor/tilt/tilt.jquery.min.js"></script>*@
+    <script src="~/LoginFile/vendor/tilt/tilt.jquery.min.js"></script>
+    @*<script>
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>*@
+    <!--===============================================================================================-->
+    @*<script src="js/main.js"></script>*@
+    <script src="~/LoginFile/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿@model TESTEntity.SignUpModel
+
+@{
+    
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">*@
+        <link href="~/LoginFile/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">*@
+        <link href="~/LoginFile/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">*@
+        <link href="~/LoginFile/vendor/animate/animate.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">*@
+        <link href="~/LoginFile/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">*@
+        <link href="~/LoginFile/vendor/select2/select2.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        @*<link rel="stylesheet" type="text/css" href="css/util.css">*@
+        <link href="~/LoginFile/css/main.css" rel="stylesheet" />
+        @*<link rel="stylesheet" type="text/css" href="css/main.css">*@
+        <link href="~/LoginFile/css/util.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <style>
+            .wrap-login100 {
+                /*padding: 92px 130px 33px 95px;*/
+                background-color: #4a2d1b40;
+            }
+
+            .container-login100 {
+                /*background-image: url('../../dist/img/3.jpg');*/
+                background-image: url('../../build/images/BOOK1.jpeg');
+                background-size: cover;
+            }
+
+            .wrapper {
+                background-color: white;
+                height: 25%;
+            }
+        </style>
+    </head>
+</head>
+<body>
+@using (Html.BeginForm("SignUpSave", "SignUp", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserID, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserID, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="SignUp" />
+        </div>
+    </div>
+    <div class="modal fade" id="MsgPopup" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:#d9edf7">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color:black">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel" style="color:black">Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="lblMsg"><b>@ViewBag.SuccessMsg</b></h4>
+                    </div>
+                    <div class="modal-header" style="background-color:#d9edf7">
+                        <div style="text-align:right"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+</body>
+</html>

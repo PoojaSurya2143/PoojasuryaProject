@@ -1,0 +1,5 @@
+D:\pj\New folder\TESTProject\DataAccess\bin\Debug\DataAccess.dll
+D:\pj\New folder\TESTProject\DataAccess\bin\Debug\DataAccess.pdb
+D:\pj\New folder\TESTProject\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\pj\New folder\TESTProject\DataAccess\obj\Debug\DataAccess.dll
+D:\pj\New folder\TESTProject\DataAccess\obj\Debug\DataAccess.pdb
